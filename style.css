@@ -1,17 +1,21 @@
 .body{
-	font-family: Courier;
+	font-family: 'Roboto', sans-serif;
+	font-family: 'Roboto Mono', monospace;
 	background: #FDF5E6;
-	width: 80%;
-	margin: 0 auto;
+	}
+
+.container{
+	width: 1180px;
+	margin: auto;
 }
 
 .home{
 	display: flex;
-	justify-content: space-around;
+	justify-content: center;
 	background: #D8BFD8;
-	width: 100vw;
-    margin-left: calc(50% - 50vw);
-}
+	width: 1600px;
+	margin: auto;
+    }
 
 .menu {
     display: flex;
@@ -87,8 +91,9 @@
 .sale{
 	display: flex;
 	flex-direction: column;
-	align-items: center;
+	justify-content: center;
+	padding: 10px;
 	background: #D8BFD8;
-	width: 100vw;
-    margin-left: calc(50% - 50vw);
+	width: 1600px;
+	margin: auto;
 }
