@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway&display=swap');
+
 .body {
 	font-family: Montserrat;
 	background: #FDF5E6;
 	width: 1180px;
 	margin: auto;
+	text-transform: capitalize;
 	}
 
 .home {
@@ -11,8 +13,9 @@
 	background: #D8BFD8;
 	width: 1600px;
 	margin: auto;
-	box-shadow: -500px 0 0 #d8bfd8, 500px 0 0 #d8bfd8;
+	box-shadow: -500px 0 0 #d8bfd8, 500px 0 0 #d8bfd8, 0 0 10px;
 	position: fixed;
+	z-index: 2;
     }
 
 .block_slide {
@@ -86,10 +89,6 @@
 	height: 400px;
 }
 
-.foto:hover {
-	transform: scale(1.2);
-}
-
 .button {
 	background: #D8BFD8;
 	padding: 15px 25px;
@@ -121,7 +120,6 @@
 	align-items: flex-start;
 	padding: 10px;
 	background: #D8BFD8;
-	width: 1600px;
 	margin: auto;
 	box-shadow: -500px 0 0 #d8bfd8, 500px 0 0 #d8bfd8;
 	}
@@ -129,6 +127,7 @@
 .sale_block {
 	position: relative;
 	animation: sale_block 3s 1;
+	z-index: 1;
 	}
 
 @keyframes sale_block {
@@ -157,6 +156,17 @@
 .main_block {
 	padding: 220px 0 0 0; 
 }
+
+.product_item:hover {
+	transform: scale(1.2);
+	position: relative;
+	z-index: 2;
+}
+
+.span {
+	text-transform: none;
+}
+
 
 @media screen and (max-width: 1024px) {
 	.body {
