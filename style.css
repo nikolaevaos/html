@@ -1,21 +1,26 @@
-.body{
-	font-family: 'Roboto', sans-serif;
-	font-family: 'Roboto Mono', monospace;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&family=Raleway&display=swap');
+.body {
+	font-family: Montserrat;
 	background: #FDF5E6;
-	}
-
-.container{
 	width: 1180px;
 	margin: auto;
-}
+	}
 
-.home{
+.home {
 	display: flex;
-	justify-content: center;
 	background: #D8BFD8;
 	width: 1600px;
 	margin: auto;
+	box-shadow: -500px 0 0 #d8bfd8, 500px 0 0 #d8bfd8;
+	position: fixed;
     }
+
+.block_slide {
+	display: flex;
+	width: 1180px;
+	height: 425px;
+	background-size: cover;
+}
 
 .menu {
     display: flex;
@@ -27,6 +32,11 @@
 .menu__item {
 	display: flex;
 	margin: 50px 50px;
+	text-decoration: underline;
+}
+
+.menu__item:hover {
+	text-decoration: none;
 }
 
 .logo {
@@ -35,6 +45,10 @@
 	height: 200px;
 	background: url(img/logo.png) center no-repeat;
 	background-size: cover;
+}
+
+.logo:hover {
+	opacity: 50%;
 }
 
 .phone {
@@ -62,14 +76,18 @@
 	border-bottom: 1px solid #111;
 }
 
-.product{
+.product {
 	display: flex;
 	justify-content: space-around;
 }
 
-.foto{
+.foto {
 	display: flex;
 	height: 400px;
+}
+
+.foto:hover {
+	transform: scale(1.2);
 }
 
 .button {
@@ -77,23 +95,128 @@
 	padding: 15px 25px;
 	}
 
-.price{
+.button:hover {
+	background: #FFF5EE;
+}
+
+.price {
 	display: flex;
 	justify-content: space-around;
 	margin: 10px;
 }
 
-.block_contact{
+.price:hover {
+	text-decoration: underline;
+	Цена действительна для Физ.лиц
+}
+
+.block_contact {
 	display: flex;
 	justify-content: space-between;
 }
 
-.sale{
+.sale {
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	align-items: flex-start;
 	padding: 10px;
 	background: #D8BFD8;
 	width: 1600px;
 	margin: auto;
+	box-shadow: -500px 0 0 #d8bfd8, 500px 0 0 #d8bfd8;
+	}
+
+.sale_block {
+	position: relative;
+	animation: sale_block 3s 1;
+	}
+
+@keyframes sale_block {
+	from {
+		left: 0;
+		}
+	to {
+		left: 500px;
+		}
+}
+
+.messenger { 
+	position: relative;
+	animation: messenger 2s infinite;
+}
+
+@keyframes messenger {
+	from { 
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+.main_block {
+	padding: 220px 0 0 0; 
+}
+
+@media screen and (max-width: 1024px) {
+	.body {
+		width: 800px;
+	}
+	.home {
+		width: 1024px;
+		box-shadow: -300px 0 0 #d8bfd8, 300px 0 0 #d8bfd8;
+	}
+	.block_slide {
+		width: 800px;
+		height: 300px;
+	}
+	.logo{
+		width: 170px;
+		height: 170px;
+	}
+	.foto{
+		height: 350px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.body {
+		width: 550px;
+	}
+	.home {
+		width: 768px;
+		box-shadow: -180px 0 0 #d8bfd8, 180px 0 0 #d8bfd8;
+	}
+	.block_slide {
+		width: 500px;
+		height: 200px;
+	}
+	.logo{
+		width: 70px;
+		height: 70px;
+	}
+	.foto{
+		height: 250px;
+	}
+}
+
+@media screen and (max-width: 480px){
+	.body {
+		width: 300px;
+	}
+	.home {
+		width: 480px;
+		box-shadow: -180px 0 0 #d8bfd8, 180px 0 0 #d8bfd8;
+	}
+	.block_slide {
+		width: 300px;
+		height: 100px;
+	}
+	.logo{
+		width: 30px;
+		height: 30px;
+	}
+	.foto{
+		height: 100px;
+	}
 }
